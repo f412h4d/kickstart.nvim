@@ -575,6 +575,16 @@ require('lazy').setup({
         -- tsserver = {},
         --
 
+        clangd = {
+          cmd = { 'clangd', '--compile-commands-dir=./build' },
+          on_attach = function(client, bufnr)
+            -- Your on_attach functions here
+          end,
+        },
+
+        -- CMake configuration
+        cmake = {},
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
